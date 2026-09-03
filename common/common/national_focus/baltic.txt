@@ -1,0 +1,88 @@
+﻿focus_tree = {
+	id = baltic_focus_PS
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = BAL
+		}
+	}
+	default = no
+	
+	continuous_focus_position = { x = 5 y = 2000 }
+
+	focus = {
+		id = BAL_another_year
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 10
+		y = 0
+		
+		cost = 1
+		
+		completion_reward = {
+
+			add_political_power = 50
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+        }
+	}
+
+}
+			
+	focus = {
+		id = BAL_prepare_speech
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = BAL_another_year }
+		x = 9
+		y = 1
+		
+		cost = 1
+
+		completion_reward = {
+			
+			add_political_power = 10
+		}
+
+	}
+			
+	focus = {
+		id = BAL_ready_the_nation
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = BAL_another_year }
+		x = 11
+		y = 1
+		
+		cost = 1
+
+		completion_reward = {
+		
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+        }
+	}
+			}
+			
+			focus = {
+		id = BAL_the_speech
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = BAL_prepare_speech }
+		prerequisite = { focus = BAL_ready_the_nation }
+		x = 10
+		y = 2
+		
+		cost = 1
+		
+		completion_reward = {
+		custom_effect_tooltip = BAL_the_speech_reward_tooltip
+		hidden_effect = {
+			
+		}
+	}
+
+			}
+}		

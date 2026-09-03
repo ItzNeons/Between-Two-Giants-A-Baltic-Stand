@@ -1,0 +1,16 @@
+ideas = {
+	country = {
+	bal_union_1 = {
+
+			picture = generic_infantry_bonus
+
+			modifier = {
+				industrial_capacity_factory = 0.2
+				consumer_goods_factor = -0.30
+				conscription = 0.03
+				training_time_factor = -0.2
+				conscription_factor = 0.3
+			}
+		}
+	}
+}
