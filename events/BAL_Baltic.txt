@@ -1,0 +1,13 @@
+add_namespace = BAL_event
+
+ country_event = {
+	id = BAL_event.1
+	title = BAL.1.t
+	desc = BAL.1.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BAL.1.a
+	}
+}

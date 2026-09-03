@@ -1,0 +1,120 @@
+﻿capital = 808
+
+oob = "BAL_1936"
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "BAL_1936_air_bba"
+	else = {
+		set_air_oob = "BAL_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+
+		}
+	}
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "BAL_1936_naval_mtg"
+	else = {
+		set_naval_oob = "BAL_1936_naval_legacy"
+	}
+}
+
+add_ideas = {
+		bal_union_1
+		extensive_conscription
+	}
+#leaders | democratic
+recruit_character = BAL_fricis_menders #LAT 
+#leaders | neutrality
+recruit_character = BAL_sophie_buxhoeveden #EST
+recruit_character = BAL_konstantin_pats #EST
+#leaders | communism
+recruit_character = BAL_jaan_anvelt #EST
+recruit_character = BAL_johannes_kabin #EST
+#leaders | fascism
+recruit_character = BAL_artur_sirk #EST
+
+#field marshals
+recruit_character = BAL_andres_larka
+recruit_character = BAL_johan_laidoner
+recruit_character = BAL_stasys_rastikis
+recruit_character = BAL_janis_balodis
+recruit_character = BAL_martinsh_penikis
+#generals
+recruit_character = BAL_herbert_brede
+recruit_character = BAL_otto_heinze
+recruit_character = BAL_aleksander_jaakson
+recruit_character = BAL_edvardas_adamkavicius
+recruit_character = BAL_kazys_skuchas
+recruit_character = BAL_stasys_pundzevichius
+recruit_character = BAL_kazys_musteikis
+recruit_character = BAL_hermanis_buks
+recruit_character = BAL_fricis_virsaitis
+recruit_character = BAL_andrejs_krustinsh
+recruit_character = BAL_zhanis_bahs
+recruit_character = BAL_krisjanis_berkis
+#advisors
+recruit_character = BAL_johannes_kabin
+recruit_character = BAL_jaan_tonisson
+recruit_character = BAL_alfons_rebane
+recruit_character = BAL_boris_kumm
+recruit_character = BAL_august_rei
+recruit_character = BAl_august_jakobson
+recruit_character = BAL_juri_uluots
+recruit_character = BAL_viktor_puskar
+recruit_character = BAL_voldemar_voolman
+recruit_character = BAl_henrik_allik
+recruit_character = BAL_johan_pitka
+recruit_character = BAL_hjalmar_mae
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	tech_trucks = 1
+	interwar_antiair = 1
+	tech_support = 1
+	basic_train = 1
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+	}
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1931.2.1"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 60
+	fascism = 12
+	communism = 16
+	neutrality = 12
+}
+set_research_slots = 3
+
+set_convoys = 25
+
+1939.1.1 = {
+
+}
